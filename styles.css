@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3836b3;
+    margin: 50px;
+}
+
+.perspective-container {
+    color: white;
+    font-family: Arial;
+    font-size: 58px;
+    font-weight: 900;
+    letter-spacing: -4px;
+    text-transform: capitalize;
+}
+
+.perspective-text {
+    height: 70px;
+    overflow: hidden;
+    position: relative;
+}
+
+p {
+    margin: 0;
+    height: 70px;
+    line-height: 40px;                               /*adds extra padding to each line*/
+    transition: all 0.5s ease-in-out;                            
+}
+
+.perspective-text:nth-child(odd) {
+    transform: skew(60deg, -30deg) scaleY(0.667);           /*skew(x-axes, y-axes) and scaleY downwards*/
+}
+
+.perspective-text:nth-child(even) {
+    transform: skew(0deg, -30deg) scaleY(1.333);
+}
+
+.perspective-container:hover p {
+    transform: translate(0, -50px);
+}
+
+/*move each child towards left by 29px to create the effect*/
+
+.perspective-text:nth-child(1) {
+    left: 29px;
+}
+
+.perspective-text:nth-child(2) {
+    left: 58px;
+}
+
+.perspective-text:nth-child(3) {
+    left: 87px;
+}
+
+.perspective-text:nth-child(4) {
+    left: 116px;
+}
+
+.perspective-text:nth-child(5) {
+    left: 145px;
+}
+
+.perspective-text:nth-child(6) {
+    left: 174px;
+}
